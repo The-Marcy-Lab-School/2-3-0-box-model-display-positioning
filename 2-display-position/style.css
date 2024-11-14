@@ -1,0 +1,42 @@
+#block-elements>div {
+  background: coral;
+  border: 1px solid black;
+}
+
+span,
+strong,
+em,
+a {
+  height: 5rem;
+  width: 5rem;
+  border: 0.1rem solid black;
+
+  /* default, width height ignored */
+  display: inline;
+
+  /* width respected, height weird */
+  /* display: inline-block; */
+
+  /* on new line always, width height respected */
+  /* display: block; */
+}
+
+.vivid {
+  font-weight: bold;
+  color: purple;
+}
+
+/* Even though images are inline, we can add width to them??? */
+img {
+  width: 200px;
+}
+
+.sticky {
+  background: blue;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+
+  position: sticky;
+  top: 0;
+}

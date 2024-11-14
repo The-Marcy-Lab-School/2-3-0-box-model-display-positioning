@@ -1,0 +1,23 @@
+* {
+  border: 1px solid red;
+}
+
+html {
+  background: black;
+}
+
+body {
+  background: grey
+}
+
+h1,
+h2,
+div,
+ul {
+  background: gainsboro;
+}
+
+p,
+li {
+  background: gold;
+}
