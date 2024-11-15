@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <h1>Wiki MovieHub</h1>
+    <nav>
+      <a href="#fun-facts-about-movies-from-the-2020s">Fun Facts</a>
+      <a href="#the-movies-made-in-the-2020s">Movies</a>
+    </nav>
+  </header>
+  <main>
+    <div id="movie-data-container">
+      <h2 id="fun-facts-about-movies-from-the-2020s">Fun Facts About Movies From The 2020s</h2>
+      <p>In the 2020s, there were <span id="number-of-movies"></span> movies made!</p>
+      <p>On average, Wikipedia had listed <span id="average-cast-size"></span> actors per movie.</p>
+      <p>Of those movies, the 5 most popular genres were...</p>
+      <ul id="genre-count-list">
+        <!-- Calculate genre list items will go here -->
+      </ul>
+    </div>
+    <div id="movies-list-container">
+      <h2 id="the-movies-made-in-the-2020s">The Movies Made In The 2020s</h2>
+      <ul id="movies-list">
+        <!-- Dynamically generated movie list items will go here -->
+      </ul>
+    </div>
+  </main>
+</body>
+<!-- Load the movies script first so that the movies variable
+ is added to the global namespace -->
+<script src="movies.js"></script>
+<script src="index.js"></script>
+</html>
