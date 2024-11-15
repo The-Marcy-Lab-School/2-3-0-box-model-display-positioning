@@ -1,0 +1,17 @@
+/* Give me full control over margin and padding */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* I like to remove bullets from my lists */
+ul {
+  list-style: none;
+}
+
+/* This is a good thing to have for most images if you want them to stay within
+their containers */
+img {
+  width: 100%;
+}

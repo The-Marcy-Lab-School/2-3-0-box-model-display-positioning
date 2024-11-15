@@ -1,49 +1,59 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  list-style: none;
-}
-
 header {
   padding: 1rem;
   background: lightgrey;
 }
 
+/* Here, I want all immediate children of the header to be inline so that the
+h1 and the nav can be next to each other */
 header>* {
-  display: inline-block;
+  display: inline;
 }
 
+/* Float lets an element sit on a particular side of its container "above" the 
+other content. text-align:right doesn't work here because its container only takes 
+up the space needed to fit the text. If we could somehow get the container to take 
+up the "remaining" space to the right of the h1, it would work, but we can't do that 
+without flexbox. TBH I don't really understand how float works because it is a
+bit of an out-dated way to do layouts. Flexbox is so much better here for this 
+exact reason! */
 header>nav {
   float: right;
 }
 
 nav>a {
+  /* remove the underline */
+  text-decoration: none;
+
+  /* The next three statements help keep the text vertically aligned. Again, with Flexbox
+  this is WAYYY easier */
   vertical-align: middle;
   line-height: 2rem;
   font-size: 1.2rem;
+
+  /* Box model stuff!*/
   margin-left: .5rem;
-  text-decoration: none;
   border: 1px solid black;
   border-radius: 5px;
   padding: .5rem .25rem;
 }
 
 main {
+  /* padding-inline is basically padding-left and padding-right combined */
   padding-inline: 1rem;
+
+  text-align: center;
 }
 
-main>* {
-  margin-block: 1rem;
-}
-
+/* I want all immediate children of the main area to have margin between them 
+Same with the movie-data-container children */
+main>*,
 #movie-data-container>* {
+  /* margin-block is basically margin-top and margin-bottom combined */
   margin-block: 1rem;
 }
 
+/*  But I don't want the margin for the first and last children. Once again, with Flexbox
+this is WAY easier. */
 #movie-data-container>*:first-child {
   margin-top: 0;
 }
@@ -52,29 +62,28 @@ main>* {
   margin-bottom: 0;
 }
 
-ul#genre-count-list li {
-  padding-bottom: .25rem;
+/* Same idea as above */
+ul#genre-count-list>* {
+  margin-bottom: .25rem;
 }
 
-ul#genre-count-list li:last-child {
-  padding-bottom: 0;
+ul#genre-count-list>*:last-child {
+  margin-bottom: 0;
 }
 
-main {
-  text-align: center;
-}
 
-#movies-list>* {
-  margin-block: 1rem;
+
+#movies-list>li {
+  /* let the movies be next to each other and be affected by width */
+  display: inline-block;
+
+  /* Box Model stuff! */
+  max-width: 250px;
+  padding: 1rem;
   border: 1px solid black;
   border-radius: 5px;
-  padding: 1rem;
-  display: inline-block;
-  margin-inline: 1rem;
-  max-width: 250px;
-  vertical-align: middle;
-}
+  margin: 1rem;
 
-img {
-  width: 100%;
+  /* Align the li in the middle, vertically, of its parent */
+  vertical-align: middle;
 }
