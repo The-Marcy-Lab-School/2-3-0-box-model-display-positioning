@@ -17,6 +17,7 @@
   <header>
     <h1>Wiki MovieHub</h1>
     <nav>
+      <!-- We can make links to headings using the heading id -->
       <a href="#fun-facts-about-movies-from-the-2020s">Fun Facts</a>
       <a href="#the-movies-made-in-the-2020s">Movies</a>
     </nav>
@@ -38,9 +39,9 @@
       </ul>
     </div>
   </main>
+  <!-- Load the movies script first so that the movies variable
+   is added to the global namespace -->
+  <script src="movies.js"></script>
+  <script src="index.js"></script>
 </body>
-<!-- Load the movies script first so that the movies variable
- is added to the global namespace -->
-<script src="movies.js"></script>
-<script src="index.js"></script>
 </html>
