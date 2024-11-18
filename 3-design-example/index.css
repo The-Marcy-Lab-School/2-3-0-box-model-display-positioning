@@ -101,8 +101,6 @@ ul#genre-count-list>*:last-child {
   margin-bottom: 0;
 }
 
-
-
 #movies-list>li {
   /* let the movies be next to each other and be affected by width */
   display: inline-block;
@@ -119,4 +117,8 @@ ul#genre-count-list>*:last-child {
 
   /* text-align will be inherited from parent elements so we have to set it back to left */
   text-align: left;
+}
+
+h3 {
+  margin-block: .5rem;
 }
