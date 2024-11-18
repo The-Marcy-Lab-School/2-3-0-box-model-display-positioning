@@ -52,7 +52,7 @@ nav>a {
 
   /* Box model stuff!*/
   margin-left: .5rem;
-  border: 1px solid black;
+  border: 1px solid #c73f3f;
   border-radius: 5px;
   padding: .5rem .25rem;
 }
