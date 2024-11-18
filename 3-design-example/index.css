@@ -57,12 +57,13 @@ nav>a {
   /* remove the underline */
   text-decoration: none;
 
-
   /* Box model stuff!*/
   margin-left: .5rem;
   border: 1px solid var(--pink-dark);
   border-radius: 5px;
   padding: .5rem .25rem;
+
+  color: white;
 }
 
 /* A "visited" link is one that has been clicked before */
