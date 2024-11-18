@@ -1,6 +1,27 @@
+/* Seek to use a readable font for most of your text. Check out https://fonts.google.com/ */
+body {
+  font-family: 'Roboto';
+}
+
+/* Dosis is more of a "display" font for headings. Check out https://fonts.google.com/ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Dosis';
+  color: #ff7b7b;
+}
+
+h1 {
+  color: white;
+}
+
 header {
   padding: 1rem;
-  background: lightgrey;
+  background: #ff7b7b;
+  color: white;
 }
 
 /* Here, I want all immediate children of the header to be inline so that the
@@ -9,32 +30,41 @@ header>* {
   display: inline;
 }
 
-/* Float lets an element sit on a particular side of its container "above" the 
-other content. text-align:right doesn't work here because its container only takes 
-up the space needed to fit the text. If we could somehow get the container to take 
-up the "remaining" space to the right of the h1, it would work, but we can't do that 
-without flexbox. TBH I don't really understand how float works because it is a
-bit of an out-dated way to do layouts. Flexbox is so much better here for this 
-exact reason! */
 header>nav {
+  /* Float lets an element sit on a particular side of its container "above" the 
+  other content. text-align:right doesn't work here because its container only takes 
+  up the space needed to fit the text. If we could somehow get the container to take 
+  up the "remaining" space to the right of the h1, it would work, but we can't do that 
+  without flexbox. TBH I don't really understand how float works because it is a
+  bit of an out-dated way to do layouts. Flexbox is so much better here for this 
+  exact reason! */
   float: right;
+
+  /* I want the floated element to have the same "line-height" as the h1 element so that
+  it can be vertically centered. This is SO much easier with Flexbox... */
+  line-height: 2.5;
 }
 
 nav>a {
   /* remove the underline */
   text-decoration: none;
 
-  /* The next three statements help keep the text vertically aligned. Again, with Flexbox
-  this is WAYYY easier */
-  vertical-align: middle;
-  line-height: 2rem;
-  font-size: 1.2rem;
 
   /* Box model stuff!*/
   margin-left: .5rem;
   border: 1px solid black;
   border-radius: 5px;
   padding: .5rem .25rem;
+}
+
+/* A "visited" link is one that has been clicked before */
+nav>a:visited {
+  color: white;
+}
+
+/* A slight changes to the color when hovering */
+nav>a:hover {
+  background: #fc5f5f;
 }
 
 main {
@@ -86,4 +116,7 @@ ul#genre-count-list>*:last-child {
 
   /* Align the li in the middle, vertically, of its parent */
   vertical-align: middle;
+
+  /* text-align will be inherited from parent elements so we have to set it back to left */
+  text-align: left;
 }
