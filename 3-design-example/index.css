@@ -108,12 +108,15 @@ ul#genre-count-list>*:last-child {
   /* Box Model stuff! */
   max-width: 250px;
   padding: 1rem;
-  border: 1px solid black;
-  border-radius: 5px;
+  border: 2px solid #ff7b7b;
+  border-radius: 10px;
   margin: 1rem;
 
-  /* Align the li in the middle, vertically, of its parent */
-  vertical-align: middle;
+  /* hard-coding the height like this is not great but without grid or Flexbox, it is
+  really challenging to get all children of a container to share the same height */
+  height: 450px;
+
+  vertical-align: top;
 
   /* text-align will be inherited from parent elements so we have to set it back to left */
   text-align: left;
